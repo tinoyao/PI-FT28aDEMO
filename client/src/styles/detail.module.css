@@ -1,0 +1,119 @@
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #365b77be;
+}
+
+.li {
+    float: left;
+  
+    font-size: 17px;
+}
+
+.li a {
+  
+    display: block;
+    color: #ccc;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.li a:hover {
+    background-color: #111;
+    background-color: #ddd;
+    color: black;
+}
+
+.card {
+    overflow: hidden;
+    color: #ccc;
+    background-color: #162836;
+    box-shadow: 7px 7px 15px #191919,
+        7px 7px 15px #292929;
+    padding: 20px;
+    margin: 50px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    opacity: 0.95;
+    text-align: center;
+    border: rgb(232, 223, 223) solid 2px;
+    height: 750px;    
+}
+
+.card img{
+    border-radius: 5%;
+}
+
+.card:hover {
+    /* border-bottom-right-radius: 60px;
+    border-top-left-radius: 60px; */
+    /* transform: scale(1.05); */
+    /* cursor: pointer; */
+}
+
+
+.letter {
+    margin: 20px 0px 10px -150px;
+    font-size: 23px;
+
+}
+.titleone{
+    margin: 50px;
+    color: rgba(44, 214, 189, 0.746);
+    font-size: 40px;
+    text-shadow: 2px 0 0 rgb(25, 24, 24);
+    text-align: center
+}
+
+.card2{
+    overflow: auto;
+    color: #ccc;
+    background-color: /* #365b77be */ transparent;
+    /* box-shadow: 7px 7px 15px #191919,
+        7px 7px 15px #292929; */
+    padding: 20px;
+    margin: 50px 50px;
+    text-decoration: none;
+    border-radius: 20px;
+    opacity: 0.95;
+   /*  max-height: 250px; */
+    /* border: rgb(232, 223, 223) solid 2px; */
+    height: 750px;
+}
+
+.card3{
+    position: relative;
+    overflow: hidden;
+    color: #ccc;
+    background-color: #162836;
+    box-shadow: 7px 7px 15px #191919,
+        7px 7px 15px #292929;
+    padding: 20px;
+    margin: 50px 50px;
+    text-decoration: none;
+    border-radius: 20px;
+    opacity: 0.95;
+    width: 200px;
+    border: rgb(232, 223, 223) solid 2px;
+}
+
+.container{
+    display: grid;
+    background-color: #365b7766;
+    grid-template-columns: 50% 50%;
+    border: rgb(232, 223, 223) solid 2px;
+    border-radius: 5%;
+    margin-top: 20px;
+    margin-left: 150px;
+    width: 1200px;
+}
+
+.error404{
+    padding-left: 280px;
+    display: grid;
+    place-items: center;
+}
+
