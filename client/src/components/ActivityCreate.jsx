@@ -103,144 +103,146 @@ function ActivityCreate() {
         </div>
         <h1 className={styles.h1} >Create Activity</h1>
         <div className={styles.iner}> 
-
-            <form
-                onSubmit={(e) => handleSubmit(e)} >
-                <div >
+            <div className={styles.formulario}>
+                
+                <form  onSubmit={(e) => handleSubmit(e)} >
                     <div >
-                        <label > Name of the activity : </label>
-                        <input
-                            placeholder='Activity'
-                            type='text'
-                            value={input.name}
-                            name='name'
-                            autoComplete='off'
-                            onChange={handleOnChange}/>
-                            {error.name && <p className={styles.p}>{error.name}</p>}
-                    </div>
-                    <div >
-                        <label >Difficulty : </label>
-                        <label>
+                        <div className={styles.latter} >
+                            <label > Name of the activity : </label>
                             <input
-                                type='radio'
-                                value='1'
-                                name='difficulty'
+                                placeholder='Activity'
+                                type='text'
+                                value={input.name}
+                                name='name'
+                                autoComplete='off'
                                 onChange={handleOnChange}/>
-                                
-                            1</label>
-                        <label>
-                            <input
-                                type='radio'
-                                value='2'
-                                name='difficulty'
-                                onChange={handleOnChange}
-                            />
-                            2</label>
-                        <label>
-                            <input
-                                type='radio'
-                                value='3'
-                                name='difficulty'
-                                onChange={handleOnChange}
-                            />
-                            3</label>
-                        <label>
-                            <input
-                                type='radio'
-                                value='4'
-                                name='difficulty'
-                                onChange={handleOnChange}
-                            />
-                            4</label>
-                        <label>
-                            <input
+                                {error.name && <p className={styles.p}>{error.name}</p>}
+                        </div>
+                        <div className={styles.latter} >
+                            <label >Difficulty : </label>
+                            <label>
+                                <input
+                                    type='radio'
+                                    value='1'
+                                    name='difficulty'
+                                    onChange={handleOnChange}/>
+                                    
+                                1</label>
+                            <label>
+                                <input
+                                    type='radio'
+                                    value='2'
+                                    name='difficulty'
+                                    onChange={handleOnChange}
+                                />
+                                2</label>
+                            <label>
+                                <input
+                                    type='radio'
+                                    value='3'
+                                    name='difficulty'
+                                    onChange={handleOnChange}
+                                />
+                                3</label>
+                            <label>
+                                <input
+                                    type='radio'
+                                    value='4'
+                                    name='difficulty'
+                                    onChange={handleOnChange}
+                                />
+                                4</label>
+                            <label>
+                                <input
 
-                                type='radio'
-                                value='5'
-                                name='difficulty'
-                                onChange={handleOnChange}
-                            />
-                            5</label>
-                            {error.difficulty && <p className={styles.p}>{error.difficulty}</p>}
-                    </div>
-                    <div >
-                        <label>Duration : </label>
-                        <input
-                            placeholder= 'Time in hours'
-                            type='number'
-                            value={input.duration}
-                            name='duration'
-                            autoComplete='off'
-                            min='0'
-                            onChange={handleOnChange} />
-                            {error.duration && <p className={styles.p}>{error.duration}</p>}
-                    </div>
-                    <div >
-                        <label >Season : </label>
-                        <label>
+                                    type='radio'
+                                    value='5'
+                                    name='difficulty'
+                                    onChange={handleOnChange}
+                                />
+                                5</label>
+                                {error.difficulty && <p className={styles.p}>{error.difficulty}</p>}
+                        </div>
+                        <div className={styles.latter} >
+                            <label>Duration : </label>
                             <input
-                                type='radio'
-                                value='Summer'
-                                name='season'
-                                onChange={handleOnChange}
-                            />
-                            Summer</label>
-                        <label>
-                            <input
-                                type='radio'
-                                value='Spring'
-                                name='season'
-                                onChange={handleOnChange}
-                            />
-                            Spring</label>
-                        <label>
-                            <input
-                                type='radio'
-                                value='Fall'
-                                name='season'
-                                onChange={handleOnChange}
-                            />
-                            Fall</label>
-                        <label>
-                            <input
-                                type="radio"
-                                value='Winter'
-                                name='season'
-                                onChange={handleOnChange}
-                            />
-                            Winter</label>
-                            {error.season && <p className={styles.p}>{error.season}</p>}
+                                placeholder= 'Time in hours'
+                                type='number'
+                                value={input.duration}
+                                name='duration'
+                                autoComplete='off'
+                                min='0'
+                                onChange={handleOnChange} />
+                                {error.duration && <p className={styles.p}>{error.duration}</p>}
+                        </div>
+                        <div className={styles.latter} >
+                            <label >Season : </label>
+                            <label>
+                                <input
+                                    type='radio'
+                                    value='Summer'
+                                    name='season'
+                                    onChange={handleOnChange}
+                                />
+                                Summer</label>
+                            <label>
+                                <input
+                                    type='radio'
+                                    value='Spring'
+                                    name='season'
+                                    onChange={handleOnChange}
+                                />
+                                Spring</label>
+                            <label>
+                                <input
+                                    type='radio'
+                                    value='Fall'
+                                    name='season'
+                                    onChange={handleOnChange}
+                                />
+                                Fall</label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    value='Winter'
+                                    name='season'
+                                    onChange={handleOnChange}
+                                />
+                                Winter</label>
+                                {error.season && <p className={styles.p}>{error.season}</p>}
 
+                        </div>
+                        <div className={styles.latter} >
+                            <label >Country : </label>
+                            <div className={styles.btn} >
+                                <select
+                                    onChange={(e ) => handleSelect(e)} >
+                                    {country && country.map((e, i ) => (
+                                        <option
+                                        value= {e.name}
+                                        key={e.id + i} 
+                                        >{e.name}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div> 
+                            {error.country && <p className={styles.p}>{error.country}</p>}               
+                        </div>
+                        {input.country.map((e) =>
+                            <ul key = {e}>
+                                <p >{e}</p>
+                                <button 
+                                    type='button'
+                                    onClick={() => handleDelete(e)}>X</button>
+                            </ul>
+                        )}
+                        <div className={styles.latter} >
+                            <input type='submit' value='Create' disabled={Object.keys(error).length} />
+                        </div>
                     </div>
-                    <div >
-                        <label >Country : </label>
-                        <div >
-                            <select
-                                onChange={(e ) => handleSelect(e)} >
-                                {country && country.map((e, i ) => (
-                                    <option
-                                    value= {e.name}
-                                    key={e.id + i} 
-                                    >{e.name}
-                                    </option>
-                                ))}
-                            </select>
-                        </div> 
-                        {error.country && <p className={styles.p}>{error.country}</p>}               
-                    </div>
-                    {input.country.map((e) =>
-                        <ul key = {e}>
-                            <p >{e}</p>
-                            <button 
-                                type='button'
-                                onClick={() => handleDelete(e)}>X</button>
-                        </ul>
-                    )}
-                    <div >
-                        <input type='submit' value='Create' disabled={Object.keys(error).length} />
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
+
         </div>
     </div>
   )

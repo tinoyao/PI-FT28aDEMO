@@ -38,7 +38,7 @@ function Detail(props) {
           <div >
             
             
-            <div className={styles.card}>
+            <div className={styles.cardDetail}>
               <img src={myCountry.flags? myCountry.flags: myCountry.img } alt="not fount" />
               <h3 className={styles.titleone} >{myCountry.name}</h3>
               <p className={styles.letter}><strong>ID : </strong>{myCountry.id}</p>
@@ -55,14 +55,14 @@ function Detail(props) {
           
         }
 
-        <div className={styles.card2}>
+        <div className={styles.cardDificultyContainer}>
 
           {
             myCountry.activities ?
             
             myCountry.activities.map((el, i) => {
               return (
-                <div className={styles.card3} >
+                <div className={styles.cardDificulty} >
                   <p><strong>Activity {i + 1} : </strong>{el.name}</p>
                   <p ><strong>Difficulty : </strong>{el.difficulty}</p>
                   <p ><strong>Duration : </strong>{el.duration} Hours</p>

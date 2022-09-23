@@ -155,7 +155,7 @@ function Home() {
                 /> 
                 )
             )
-            : <img src='https://upload.wikimedia.org/wikipedia/commons/9/96/Mundo_hecho_de_Banderas.gif' alt='Loading' className={styles.gif} width='500px' height='500px'/> }
+            : <div className={styles.gifContainer}><img src='https://upload.wikimedia.org/wikipedia/commons/9/96/Mundo_hecho_de_Banderas.gif' alt='Loading' className={styles.gif} /></div>  }
             </ul>
         </div>
         <div className={styles.paginattion} >
